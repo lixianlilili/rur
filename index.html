@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山东大学青岛湿地生物考察团</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <script src="./js/jq.js"></script>
+  <link rel="stylesheet" href="./css/index1.css">
+
+</head>
+
+<body>
+
+  <div class="music-wrap" id="musicwrap">
+    <audio id="play1" controls>
+      <source src="./img/music.mp3">
+    </audio>
+  </div>
+
+
+  <canvas class="canvas-wrap" id="triangle-lost-in-space" resize="true"></canvas>
+
+  <!-- loadding -->
+  <div class="lodding-wrap">
+    <div class="loadding-div"></div>
+  </div>
+  <!-- 遮罩层 -->
+  <div class="zhezhao" id="zhezhao">
+    <span class="close"><svg t="1649229755294" class="icon" viewBox="0 0 1024 1024" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" p-id="4692" width="32" height="32">
+        <path
+          d="M512 0C229.187368 0 0 229.187368 0 512 0 794.812632 229.187368 1024 512 1024 794.812632 1024 1024 794.812632 1024 512 1024 229.187368 794.812632 0 512 0ZM512 970.105263C259.368421 970.105263 53.894737 764.631579 53.894737 512 53.894737 259.368421 259.368421 53.894737 512 53.894737 764.631579 53.894737 970.105263 259.368421 970.105263 512 970.105263 764.631579 764.631579 970.105263 512 970.105263ZM550.130526 512 719.629474 342.366316C730.273684 331.856842 730.273684 314.88 719.629474 304.370526 709.12 293.726316 692.143158 293.726316 681.633684 304.370526L512 473.869474 342.366316 304.370526C331.856842 293.726316 314.88 293.726316 304.370526 304.370526 293.726316 314.88 293.726316 331.856842 304.370526 342.366316L473.869474 512 304.370526 681.633684C293.726316 692.143158 293.726316 709.12 304.370526 719.629474 309.625263 724.884211 316.496842 727.578947 323.368421 727.578947 330.24 727.578947 337.111579 724.884211 342.366316 719.629474L512 550.130526 681.633684 719.629474C686.888421 724.884211 693.76 727.578947 700.631579 727.578947 707.503158 727.578947 714.374737 724.884211 719.629474 719.629474 730.273684 709.12 730.273684 692.143158 719.629474 681.633684L550.130526 512Z"
+          p-id="4693"></path>
+      </svg></span>
+    <div id="videoResume">
+      <video id="videoResumeC" controls="" name="media">
+        <source src="http://123.56.144.92/hualang/WhyDon'tWe.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- 主要页面 -->
+  <div class="box">
+
+    <!-- 顶部栏 -->
+    <div class="header borderafter">
+      <!-- 返回按钮 -->
+      <a style="position: absolute;left:50px;" href="javascript:history.back()">
+        <svg t="1649246285004" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="3737" width="20" height="20">
+          <path
+            d="M98 468.9l322.8-322.8v184.4C743.6 376.7 881.9 607.3 928 837.8 812.7 676.4 651.3 602.6 420.8 602.6v189.1L98 468.9z"
+            p-id="3738" fill="#254665"></path>
+        </svg>
+      </a>
+
+
+      <div class="col">
+        <span>我们的考察！</span>
+        <!-- 右边操作栏 -->
+
+     
+          <!-- 按钮 -->
+          <div class="min_menu-wrap" id="minmenu">
+            <span class="min_menu"></span>
+          </div>
+          <!-- 列表 -->
+          <div class="menu_list">
+            <!-- 栏目 -->
+            <ul class="header-nav">
+              <li class="active"><a href="./index.html">主页</a></li>
+              <li><a href="./activity.html">活动内容简介</a></li>
+              <li><a href="./resume.html">采集到的生物</a></li>
+              <li><a href="./contact.html">视频</a></li>
+              <li><a href="./blog.html">报告</a></li>
+              <li><a href="./live.html">照片记录</a></li>
+            </ul>
+            <!-- 开关灯 -->
+            <span class="kaig-bottm">
+              <svg t="1649159647627" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="2250" width="15" height="15">
+                <path
+                  d="M1008.535135 710.670332l-70.446388 116.386904a112.099975 112.099975 0 0 1-140.572857 43.829042l-69.422645-17.083729c-5.502624 3.1992-11.133217 6.3984-16.763809 9.341665l-18.299425 62.896276C687.335435 981.514621 639.4754 1023.744064 582.657604 1023.744064H441.764828c-56.817796 0-104.677831-42.293427-110.308423-97.703574l-18.299425-62.896276a422.166458 422.166458 0 0 1-16.827793-9.341665l-69.614597 17.083729a112.163959 112.163959 0 0 1-140.508873-43.893026L15.631361 710.542364a107.493127 107.493127 0 0 1 32.43989-144.731817L96.251206 518.910272a410.649338 410.649338 0 0 1 0-14.204448l-48.179955-46.836291a107.365159 107.365159 0 0 1-32.375906-144.731817l70.190452-116.450888a112.099975 112.099975 0 0 1 140.572857-43.893026l69.550612 17.083729c5.566608-3.1992 11.133217-6.3984 16.827794-9.341665l18.299425-62.896276C336.831061 42.229443 384.691096 0 441.508892 0H582.529636c56.817796 0 104.677831 42.293427 110.372407 97.63959l18.235441 62.704324c5.75856 3.007248 11.325169 6.142464 16.827793 9.341665l69.678581-17.083729a112.163959 112.163959 0 0 1 140.508873 43.893026l70.446388 116.514872a107.493127 107.493127 0 0 1-32.375906 144.731817l-48.179955 46.772307a414.616346 414.616346 0 0 1 0 14.204448l48.243939 46.836291c47.092227 31.928018 62.192452 94.952262 32.247938 145.115721z m-213.066733-142.23644l3.391152-31.032242a246.210447 246.210447 0 0 0 0-51.699076l-3.263184-30.904274 93.992502-91.305173-53.554612-88.553862-131.615096 32.311922-23.546113-16.059985a294.134466 294.134466 0 0 0-48.627844-26.809297l-27.513121-11.901025L568.453156 127.968008H455.649356L419.370426 252.736816l-27.705074 11.965009c-16.635841 7.166208-32.951762 16.187953-48.499875 26.745313l-23.610097 15.996001-131.487128-32.247938-53.36266 88.489878 94.056486 91.433141-3.263184 30.968258a247.874031 247.874031 0 0 0 0 51.699076l3.1992 30.904274-93.928518 91.369157 53.554612 88.489878 131.551112-32.311922 23.610097 16.059985c15.292177 10.429393 31.544114 19.451137 48.563859 26.809297l27.577106 11.965009L455.905292 895.776056h112.611848l36.342914-124.768808 27.64109-11.965009c16.699825-7.166208 32.951762-16.187953 48.563859-26.745313l23.546113-15.996001 131.423144 32.247938 53.68258-88.745814-94.184454-91.369157zM512.147232 615.846038c57.329668 0 103.846038-46.516371 103.974006-103.974006 0-57.329668-46.644339-103.974006-103.974006-103.974007S408.173225 454.542364 408.173225 511.872032 454.817564 615.846038 512.147232 615.846038z m0 127.968008c-127.968008 0-231.942014-103.910022-231.942015-231.942014 0-127.968008 103.910022-231.942014 231.942015-231.942015 127.968008 0 231.942014 103.910022 231.942014 232.133967A232.133967 232.133967 0 0 1 512.147232 743.814046z"
+                  p-id="2251"></path>
+              </svg>
+              <!-- 开关按钮 -->
+              <span class="my-radio active" id="myRadio">
+                <i></i>
+              </span>
+              <svg t="1649159678284" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="3376" width="15" height="15">
+                <path
+                  d="M505.4 878.6c-196.7 0-358-150.9-374.9-343.1 1-18.6 16.1-33.4 34.9-33.4 10.8 0 20.5 4.8 26.9 12.4 0.2 0.3 0.5 0.1 0.5-0.7 41.6 44.2 100.5 71.9 166.1 71.9 127.1 0 230.1-103 230.1-230.1 0-66.1-28-125.1-72.6-166.8 0.1-0.1 0.5-0.1 0.3-0.3-7-6.5-11.4-15.7-11.4-26.1 0-19 14.9-34.1 33.7-35.3 192.1 17.1 342.9 178.3 342.9 375 0 208-168.5 376.5-376.5 376.5z"
+                  p-id="3377"></path>
+              </svg>
+            </span>
+          </div>
+        
+      </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <div class="navigation">
+      <div class="nav-titleBox co zz">
+        <!-- 占位符 -->
+        <div class="co-left"></div>
+
+        <!-- 标题 -->
+        <div class="co-right ">
+          <span class="titleBox-tag">欢迎来到我们的考察！</span>
+          <h1>
+            我们是<br>
+            山东大学（青岛）博物社湿地考察团
+          </h1>
+          <a class="buttom navbtn" href="#next-one">了解一下
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- 主要内容 -->
+    <div class="container content zz">
+     
+      <!-- 右边 -->
+      <div class="co-right" id="next-one">
+        <p>
+          <br> <br> <br> <br>
+         </p>
+        <!-- 完成项目 -->
+        <div class="content-li li1">
+         
+          <div class="li1-box borderbefore">
+            
+            <span>多学科背景</span><span class="tag">六大学院</span>
+            <div class="borderbotm"></div>
+            <p>山东大学生命科学学院x计算机科学与技术学院x政治管理学院x信息学院x环境学院x法学院</p>
+          </div>
+          <div class="li1-box borderbefore">
+            <span>有趣的团队</span><span class="tag">奇思妙想</span>
+            <div class="borderbotm"></div>
+            <p>有的成员心灵手巧的，有的博学多才，有的善于拍摄和记录，年轻的灵魂发生神奇的化学反应</p>
+          </div>
+          <div class="li1-box borderbefore">
+            <span>考察地点</span><span class="tag">物华天宝</span>
+            <div class="borderbotm"></div>
+            <p>团队分为三组分别前往东鄱阳湖，鸦鹊湖和莲花山地区进行考察</p>
+          </div>
+        </div>
+        <!-- 我的故事 -->
+        <div class="content-li li2">
+          <h3>
+            <span>山野高歌</span>
+            <div class="borderbotm"></div>
+            <span>01</span>
+          </h3>
+          <div class="carbox li2-box">
+            <blockquote>
+              一个湖是风景中最美、最有表情的姿容。它是大地的眼睛；望着它的人可以测出他自己的天性的深浅。湖所产生的湖边的树木是睫毛一样的镶边，而四周森林蓊郁的群山和山崖是它的浓密突出的眉毛。----《瓦尔登湖》
+            </blockquote>
+          </div>
+        </div>
+        <!-- 视频简历 -->
+        <div class="content-li li3">
+          <h3>
+            <span>考察vlog</span>
+            <div class="borderbotm"></div>
+            <span>02</span>
+          </h3>
+              <video width="600" height="400" controls>
+                <source src="视频一.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+        <!-- 我的能力 -->
+        <div class="content-li li4">
+          <h3>
+            <span>分头行动！</span>
+            <div class="borderbotm"></div>
+            <span>03</span>
+          </h3>
+          <div class="li4-box">
+            
+            <div class="carbox">
+            
+              <img src="oll\2e5ad6a832fff1c3e66ef3b310397d5.jpg"  alt="">
+            </div>
+            <div class="carbox">
+             
+              <h4>一组发往东鄱阳湖地区</h4>
+              <p>
+                生科朱明晨，生科徐扬，生科余沁馨<br>生科余茗杨，生科赵正君，法学范吉星，计科王任晗<br>计科黎贤栗，政管从天悦，生科郭娴倬琪<br>
+                
+              </p>
+              <a>团结奋斗！</a>
+            </div>
+            <div class="carbox">
+            
+              <h4>二组发往鸦鹊湖地区</h4>
+              <p>
+                生科张国瑞，信院张美彬，环境罗舒灵<br>环境林文超，生科王如琳，生科廖家宝<br>生科郎近之，政管廖伟成，生科安秦乐
+              </p>
+              <a>自由无拘！</a>
+            </div>
+            <div class="carbox">
+              
+              <h4>三组发往莲花山地区</h4>
+              <p>
+                生科邵子腾，生科谭桦<br><br>政管朱思儒，生科杨云骢<br><br>生科方心语，信院杜幸龙
+              </p>
+              <a>永远具有生命力！</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 我的期望薪资 (新加) -->
+        <div class="content-li li7">
+          <h3>
+            <span>活动前的期待</span>
+            <div class="borderbotm"></div>
+            <span>04</span>
+          </h3>
+          <div class="li7-box">
+            <div class="carbox li7boxitem ">
+              <div>
+                <h3>黎贤栗</h3>
+                <div class="item-price">
+                  <sub>の</sub>
+                  期待
+                  <sub>ooo</sub>
+                </div>
+              </div>
+              <div class="borderbotm"></div>
+              <p>我希望可以多交一些朋友</p>
+              <p>团队里的同学都在展示自己的爱好和特长</p>
+              <p>幻想一段难忘的回忆</p>
+          
+              <button class="buttonsty">同感</button>
+            </div>
+            <div class="carbox li7boxitem">
+              <div>
+                <h3>朱明晨</h3>
+                <div class="item-price">
+                  <sub>*&……</sub>
+                  の
+                  <sub>期待</sub>
+                </div>
+              </div>
+              <div class="borderbotm"></div>
+              <p>希望通过实地考察</p>
+              <p>了解鄱阳湖的现状</p>
+              <p>非常期待这一次”彭“程万里，”泽“被草木的湿地调研活动</p>
+             
+              <button class="buttonsty">赞同</button>
+            </div>
+          </div>
+        
+        </div>
+        
+      
+
+        <!-- 我的专业教室 -->
+        <div class="content-li li5">
+          <h3>
+            <span>团队成员</span>
+            <div class="borderbotm"></div>
+            <span>05</span>
+          </h3>
+          <div class="li5-box">
+            <div class="left buttonsty" id="leftimg">
+              <span>
+                <svg t="1649148549783" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" p-id="22757" width="25" height="25">
+                  <path
+                    d="M325.399273 235.124364L600.157091 488.727273 325.399273 742.353455a34.909091 34.909091 0 1 0 47.36 51.316363l302.545454-279.272727a34.909091 34.909091 0 0 0 0-51.316364l-302.545454-279.272727a34.909091 34.909091 0 1 0-47.36 51.316364"
+                    fill="#ffffff" p-id="22758" data-spm-anchor-id="a313x.7781069.0.i41" class="selected"></path>
+                </svg>
+              </span>
+            </div>
+            <div class="right buttonsty" id="rightimg">
+              <span>
+                <svg t="1649148517782" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" p-id="21306" width="25" height="25">
+                  <path
+                    d="M675.328 765.626182L400.570182 512l274.757818-253.626182a34.909091 34.909091 0 1 0-47.36-51.316363l-302.545455 279.272727a34.909091 34.909091 0 0 0 0 51.316363l302.545455 279.272728a34.909091 34.909091 0 1 0 47.36-51.316364"
+                    fill="#ffffff" p-id="21307" data-spm-anchor-id="a313x.7781069.0.i34" class="selected"></path>
+                </svg>
+
+
+              </span></div>
+
+            <div class="li5box-ul" id="li5boxul">
+              <div class="li5box-car carbox">
+                <img src="oll\a59cb8f6a34f4b84cea8d54ee7b7159.jpg" alt="">
+                <h3>王如琳</h3>
+                <span>wangrulin</span>
+                <p>
+                  生命科学学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="oll\48ba27b04181d13e7ccf07133a3276ce.JPG" alt="">
+                <h3>余沁馨</h3>
+                <span>yuqinxin</span>
+                <p>
+                  生命科学学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="oll\ab53fad91cabbb32ead25f3d40eab41f.JPG" alt="">
+                <h3>徐扬</h3>
+                <span>xuyang</span>
+                <p>
+                  生命科学学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="oll\cc1cf89d8379362cfd029733111bad88.JPG" alt="">
+                <h3>罗舒灵</h3>
+                <span>luoshuling</span>
+                <p>
+                  环境科学与工程学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="oll\66ff072d38aee9570d26e1a90ff6c57.jpg" alt="">
+                <h3>朱明晨</h3>
+                <span>zhumingchen</span>
+                <p>
+                  生命科学学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="oll\d638b1a23c3cefb4b7fff90eb8e4bf3.jpg" alt="">
+                <h3>黎贤栗</h3>
+                <span>lixianli</span>
+                <p>
+                  计算机科学与技术学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="范吉星.jpg" alt="">
+                <h3>范吉星</h3>
+                <span>fanjixing</span>
+                <p>
+                  法学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="oll\75378081cbe6bc1e68ed2d8dd5a8c62.jpg" alt="">
+                <h3>王任晗</h3>
+                <span>wangrenhan</span>
+                <p>
+                  计算机科学与技术学院
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="一堆合照.jpg" alt="">
+                <h3>一队成员合照</h3>
+               
+                <p>
+                  东鄱阳湖一队
+                </p>
+              </div>
+              <div class="li5box-car carbox">
+                <img src="大合照.jpg" alt="">
+                <h3>大合照</h3>
+                
+                <p>
+                  合照
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- 最近完成 -->
+        <div class="content-li li6">
+          <h3>
+            <span>我们的主要参考资料
+            </span>
+            <div class="borderbotm"></div>
+            <span>06</span>
+          </h3>
+          <div class="li6-box">
+            <div class="carbox">
+              <a class="imgbox" href="https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=B6048DA04D84BA118E053020B0A0A108E000">
+                <img src=" oll\4b90f603738da9773912a37f6e19ef198618367a4504.webp" alt="">
+              </a>
+              <div class="li6car-title">
+                《中国鸟类分类与分布名录》（第三版）
+                <br><br>重要图鉴
+                <div class="borderbotm"></div>
+                <a href="oll/上饶鸟种.xlsx">表格：上饶鸟种</a>
+              </div>
+            </div>
+            <div class=" carbox">
+              <a class="imgbox" href="http://www.cnbird.org.cn/shouce/c.asp.htm">
+                <img src="https://pic17.997788.com/_pic_search/00/17/04/04/17040473.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                《中国鸟类野外手册》（PDA版）
+                <br><br>鸟类宝典
+                <div class="borderbotm"></div>
+                <a href="oll/关于观鸟.docx">佬社の教导</a>
+              </div>
+            </div>
+           
+        </div>
+
+
+
+
+        <div class="content-li li6">
+          <h3>
+            <span>周边设计
+            </span>
+            <div class="borderbotm"></div>
+            <span>07</span>
+          </h3>
+          <div class="li6-box">
+            <div class="carbox">
+              <a class="imgbox" href="6e3431dff9e35a538d73efb3e1562d4.jpg">
+                <img src="6e3431dff9e35a538d73efb3e1562d4.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                团队宣传海报
+                <br><br>《博物致知》
+                <div class="borderbotm"></div>
+                <a >by：方心语</a>
+              </div>
+            </div>
+            <div class=" carbox">
+              <a class="imgbox" href="b43a951ebc57412ed4cd251d8d94453.jpg">
+                <img src="b43a951ebc57412ed4cd251d8d94453.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                团队宣传海报
+                <br><br>哪里不一样
+                <div class="borderbotm"></div>
+                <a >by：王如琳</a>
+              </div>
+            </div>
+            <div class=" carbox">
+              <a class="imgbox" href="贴纸.jpg">
+                <img src="贴纸.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                团队贴纸
+                <br><br>
+                <div class="borderbotm"></div>
+                <a >by：王如琳</a>
+              </div>
+            </div>
+            <div class=" carbox">
+              <a class="imgbox" href="书签.jpg">
+                <img src="书签.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                明信片
+                <br><br>
+                <div class="borderbotm"></div>
+                <a >by：方心语</a>
+              </div>
+              
+            </div>
+            <div class=" carbox">
+              <a class="imgbox" href="明信片.jpg">
+                <img src="明信片.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                书签
+                <br><br>
+                <div class="borderbotm"></div>
+                <a >by：方心语</a>
+              </div>
+              
+            </div>
+            <div class=" carbox">
+              <a class="imgbox" href="钥匙扣.jpg">
+                <img src="钥匙扣.jpg" alt="">
+              </a>
+              <div class="li6car-title">
+                手机支架和钥匙扣
+                <br><br>
+                <div class="borderbotm"></div>
+              
+              </div>
+              
+            </div>
+        </div>
+
+        <div class="borderbotm"></div>
+        <!-- 底部 -->
+        <div class="carbox copybottm">
+          ©2024夏 我们一起观察这个美丽的世界
+        </div>
+      </div>
+      <div class="left">
+      </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="./js/paper-full.min.js"></script>
+<script type="text/javascript" src="./js/canvas.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/index1.js"></script>
+
+
+</html>
